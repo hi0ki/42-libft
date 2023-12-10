@@ -6,7 +6,7 @@
 /*   By: eel-ansa <eel-ansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 18:26:02 by eel-ansa          #+#    #+#             */
-/*   Updated: 2023/12/08 18:55:55 by eel-ansa         ###   ########.fr       */
+/*   Updated: 2023/12/09 19:01:20 by eel-ansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,3 @@ int ft_isascii(int c)
         return (1);
     return (0);
 }
-
-/*
-int main()
-{
-    printf("%d", isascii(0));
-}*/

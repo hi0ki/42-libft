@@ -6,7 +6,7 @@
 /*   By: eel-ansa <eel-ansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 22:42:26 by eel-ansa          #+#    #+#             */
-/*   Updated: 2023/12/08 18:55:23 by eel-ansa         ###   ########.fr       */
+/*   Updated: 2023/12/09 19:01:40 by eel-ansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,3 @@ int ft_tolower(int c)
         c += 32;
     return (c);
 }
-
-/*
-#include <stdio.h>
-#include <ctype.h>
-int main()
-{
-    printf("%c", ft_tolower('q'));
-}*/

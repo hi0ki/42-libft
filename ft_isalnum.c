@@ -6,7 +6,7 @@
 /*   By: eel-ansa <eel-ansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 18:49:57 by eel-ansa          #+#    #+#             */
-/*   Updated: 2023/12/08 18:56:04 by eel-ansa         ###   ########.fr       */
+/*   Updated: 2023/12/09 19:01:14 by eel-ansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,3 @@ int ft_isalnum(int c)
         return (1);
     return (0);
 }
-
-/*#include <stdio.h>
-#include <ctype.h>
-int main()
-{
-    printf("%d", isalnum('B'));
-}*/

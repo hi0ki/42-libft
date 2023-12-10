@@ -6,7 +6,7 @@
 /*   By: eel-ansa <eel-ansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 22:47:55 by eel-ansa          #+#    #+#             */
-/*   Updated: 2023/12/08 23:18:12 by eel-ansa         ###   ########.fr       */
+/*   Updated: 2023/12/09 19:01:37 by eel-ansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,3 @@ size_t ft_strlen(const char *str)
         i++;
     return (i);
 }
-
-// int main()
-// {
-//     printf("%d", ft_strlen("mehdi"));
-// }
