@@ -2,8 +2,13 @@
 #include <string.h>
 int main()
 {
-    char dest[] = "heallao\0";
-    char src[] = "heallao2B";
-    printf("%d\n", ft_strncmp(dest, src, 10));
-    printf("%d\n", strncmp(dest, src, 10));
+    int *dest;
+    int i = 0;
+    dest = ft_calloc(2, sizeof(int));
+    while (i < 4)
+    {
+        printf("%d\n", dest[i]);
+        i++;
+    }
+    // printf("%s\n", ft_memchr(dest, 'w', sizeof(dest)));
 }

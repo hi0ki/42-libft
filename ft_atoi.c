@@ -6,7 +6,7 @@
 /*   By: eel-ansa <eel-ansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/08 18:46:13 by eel-ansa          #+#    #+#             */
-/*   Updated: 2023/12/09 19:01:07 by eel-ansa         ###   ########.fr       */
+/*   Updated: 2023/12/10 21:35:00 by eel-ansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int ft_atoi(const char *str)
 			sign = -1;
 		i++;
 	}
-	while (str[i] >= '0' && str[i] <= '9')
+	while (ft_isdigit(str[i]) == 1)
 	{
 		old = result;
 		result = result * 10 + str[i] - 48;
