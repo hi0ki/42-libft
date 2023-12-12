@@ -2,13 +2,18 @@
 #include <string.h>
 int main()
 {
-    int *dest;
+    const char dest = "hello";
     int i = 0;
-    dest = ft_calloc(2, sizeof(int));
-    while (i < 4)
-    {
-        printf("%d\n", dest[i]);
-        i++;
-    }
-    // printf("%s\n", ft_memchr(dest, 'w', sizeof(dest)));
+    printf("%s\n", _strdup(dest));
+}
+
+char *_strdup(const char *s)
+{
+    char *str;
+
+    str = malloc(ft_strlen(s) * sizeof(char));
+    if (!str)
+        return (NULL);
+    str = (char *)s;
+    return (str);
 }
