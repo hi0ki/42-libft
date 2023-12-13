@@ -6,7 +6,7 @@
 /*   By: eel-ansa <eel-ansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/09 23:26:42 by eel-ansa          #+#    #+#             */
-/*   Updated: 2023/12/10 00:13:40 by eel-ansa         ###   ########.fr       */
+/*   Updated: 2023/12/11 18:30:00 by eel-ansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,7 @@ char *ft_strchr(const char *s, int c)
             return (str + i);
         i++;
     }
+    if (str[i] == c)
+        return (str + i);
     return (NULL);
 }

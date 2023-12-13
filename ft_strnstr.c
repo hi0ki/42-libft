@@ -6,8 +6,10 @@
 /*   By: eel-ansa <eel-ansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 15:36:40 by eel-ansa          #+#    #+#             */
-/*   Updated: 2023/12/11 15:36:44 by eel-ansa         ###   ########.fr       */
+/*   Updated: 2023/12/12 20:47:49 by eel-ansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
+char *ft_strnstr(const char *haystack, const char *needle, size_t len);
