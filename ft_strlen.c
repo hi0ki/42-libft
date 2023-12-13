@@ -6,18 +6,18 @@
 /*   By: eel-ansa <eel-ansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 22:47:55 by eel-ansa          #+#    #+#             */
-/*   Updated: 2023/12/12 19:49:24 by eel-ansa         ###   ########.fr       */
+/*   Updated: 2023/12/13 12:14:47 by eel-ansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t ft_strlen(const char *str)
+size_t	ft_strlen(const char *str)
 {
-    unsigned int i;
+	unsigned int	i;
 
-    i = 0;
-    while (str[i])
-        i++;
-    return (i);
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
 }

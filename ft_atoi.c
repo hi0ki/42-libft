@@ -6,18 +6,17 @@
 /*   By: eel-ansa <eel-ansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/08 18:46:13 by eel-ansa          #+#    #+#             */
-/*   Updated: 2023/12/10 21:35:00 by eel-ansa         ###   ########.fr       */
+/*   Updated: 2023/12/13 12:00:55 by eel-ansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
-	int i;
-	int result;
-	int sign;
-	int old;
+	int	i;
+	int	result;
+	int	sign;
 
 	i = 0;
 	result = 0;
@@ -32,12 +31,7 @@ int ft_atoi(const char *str)
 	}
 	while (ft_isdigit(str[i]) == 1)
 	{
-		old = result;
 		result = result * 10 + str[i] - 48;
-		if (old != (result / 10) && sign == 1)
-			return (-1);
-		if (old != (result / 10) && sign == -1)
-			return (0);
 		i++;
 	}
 	return (result * sign);

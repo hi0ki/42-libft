@@ -1,10 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: eel-ansa <eel-ansa@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/12/13 12:31:18 by eel-ansa          #+#    #+#             */
+/*   Updated: 2023/12/13 12:32:19 by eel-ansa         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
-#include <string.h>
-int main()
+
+/*int main()
 {
-    int dest[10];
-    char src[] = "abcdef";
-    ;
-    // for (size_t i = 0; i < 4; i++)
-    printf("%s\n", strdup(NULL));
-}
+	char	dest[] = "hiki mehdi ansa eel";
+	char src[] = "ansa";
+
+	// for (size_t i = 0; i < 4; i++)
+	// printf("%s\n", ft_strnstr(dest, src, 13));
+}*/
