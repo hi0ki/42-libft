@@ -2,8 +2,9 @@
 #include <string.h>
 int main()
 {
-    char dest[] = "abcdefg";
+    int dest[10];
     char src[] = "abcdef";
-
-    printf("%s\n", ft_memchr(NULL, 'i', 6));
+    ;
+    // for (size_t i = 0; i < 4; i++)
+    printf("%s\n", strdup(NULL));
 }

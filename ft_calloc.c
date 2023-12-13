@@ -6,7 +6,7 @@
 /*   By: eel-ansa <eel-ansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 01:30:22 by eel-ansa          #+#    #+#             */
-/*   Updated: 2023/12/12 16:24:42 by eel-ansa         ###   ########.fr       */
+/*   Updated: 2023/12/13 10:38:20 by eel-ansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,6 @@ void *ft_calloc(size_t count, size_t size)
     str = malloc(count * size);
     if (!str)
         return (NULL);
-    ft_memset(str, '\0', sizeof(str));
+    ft_bzero(str, sizeof(str));
     return ((str));
 }
