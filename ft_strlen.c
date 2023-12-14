@@ -6,7 +6,7 @@
 /*   By: eel-ansa <eel-ansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 22:47:55 by eel-ansa          #+#    #+#             */
-/*   Updated: 2023/12/13 12:14:47 by eel-ansa         ###   ########.fr       */
+/*   Updated: 2023/12/14 22:47:51 by eel-ansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,3 +21,8 @@ size_t	ft_strlen(const char *str)
 		i++;
 	return (i);
 }
+
+// int main()
+// {
+// 	printf("%zu", ft_strlen("hello world"));
+// }

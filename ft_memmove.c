@@ -6,7 +6,7 @@
 /*   By: eel-ansa <eel-ansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/12 17:46:47 by eel-ansa          #+#    #+#             */
-/*   Updated: 2023/12/14 10:48:28 by eel-ansa         ###   ########.fr       */
+/*   Updated: 2023/12/14 21:33:21 by eel-ansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,15 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	size_t	i;
 	size_t	j;
-	char	*dest;
-	char	*s;
+	unsigned char	*dest;
+	unsigned char	*s;
 
 	if (!dst && !src)
 		return (NULL);
 	i = 0;
 	j = len - 1;
-	dest = (char *)dst;
-	s = (char *)src;
+	dest = (unsigned char *)dst;
+	s = (unsigned char *)src;
 	if (src > dst)
 		ft_memcpy(dst, src, len);
 	else
