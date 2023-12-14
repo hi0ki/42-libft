@@ -6,7 +6,7 @@
 /*   By: eel-ansa <eel-ansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 15:36:40 by eel-ansa          #+#    #+#             */
-/*   Updated: 2023/12/13 12:15:32 by eel-ansa         ###   ########.fr       */
+/*   Updated: 2023/12/14 11:44:25 by eel-ansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	i = 0;
 	str = (char *)haystack;
 	chr = (char *)needle;
+	if (!chr[i])
+		return (str);
 	while (str[i] && i < len)
 	{
 		j = 0;
@@ -33,3 +35,9 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (NULL);
 }
+
+// int main()
+// {
+// 	printf("%s\n", ft_strnstr("lorem ipsum dolor sit amet", "dolor", 0));
+// 	printf("%s\n", strnstr("lorem ipsum dolor sit amet", "dolor", 0));
+// }

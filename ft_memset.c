@@ -6,7 +6,7 @@
 /*   By: eel-ansa <eel-ansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/09 19:25:50 by eel-ansa          #+#    #+#             */
-/*   Updated: 2023/12/13 12:11:35 by eel-ansa         ###   ########.fr       */
+/*   Updated: 2023/12/14 11:48:43 by eel-ansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memset(void *b, int c, size_t len)
 
 	i = 0;
 	str = (unsigned char *)b;
-	while (i < len && str[i])
+	while (i < len)
 	{
 		str[i] = (unsigned char)c;
 		i++;
@@ -29,24 +29,21 @@ void	*ft_memset(void *b, int c, size_t len)
 
 // int main()
 // {
-//     int str[] = {1, 2, 3};
-//     double *str2 = calloc(3,sizeof(int));
+//  	char *b1 = (char*)malloc(sizeof(char) * (0xF0000 + 1));
+//  	char *b2 = (char*)malloc(sizeof(char) * (0xF0000 + 1));
 
-//     int i = 0;
-
-//     memset(str, 4, 3);
-//     memset(str2, 1/49, 3);
-
-//     while (i < 3)
-//     {
-//         printf("%d\n", str[i]);
-//         i++;
-//     }
-//     i = 0;
-//     while (i<3)
-//     {
-//         printf("%d\n", str2[i]);
-//         i++;
-//     }
-
+//  	*b1 = 0;
+//  	*b2 = 0;
+//  	ft_memset(b2, '\5', 0xF0000);
+//  	if (!memcmp(b1, b2, 0xF0000))
+//  	{
+//  		free(b1);
+//  		free(b2);
+//  		printf("TEST_SUCCESS");
+//  		return 0;
+//  	}
+//  	free(b1);
+//  	free(b2);
+//  	printf("TEST_FAILED");
+//  	return 1;
 // }

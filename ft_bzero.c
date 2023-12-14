@@ -6,7 +6,7 @@
 /*   By: eel-ansa <eel-ansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 22:48:27 by eel-ansa          #+#    #+#             */
-/*   Updated: 2023/12/13 12:02:15 by eel-ansa         ###   ########.fr       */
+/*   Updated: 2023/12/14 10:30:50 by eel-ansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	int		i;
+	size_t	i;
 	char	*str;
 
 	i = 0;

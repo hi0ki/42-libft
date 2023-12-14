@@ -6,7 +6,7 @@
 /*   By: eel-ansa <eel-ansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/12 20:46:35 by eel-ansa          #+#    #+#             */
-/*   Updated: 2023/12/13 12:12:39 by eel-ansa         ###   ########.fr       */
+/*   Updated: 2023/12/14 11:31:11 by eel-ansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,27 @@
 
 char	*ft_strdup(const char *s1)
 {
-	int		i;
 	char	*str;
 
-	str = ft_calloc(ft_strlen(s1), sizeof(char));
+	str = ft_calloc(ft_strlen(s1) + 1, sizeof(char));
 	if (!str)
 		return (NULL);
-	ft_memcpy(str, s1, sizeof(s1));
+	ft_memcpy(str, s1, ft_strlen(s1));
 	return (str);
 }
 
 // int main()
 // {
-//     int dest[10];
-//     char src[] = "abcdef";
-//     ;
-//     // for (size_t i = 0; i < 4; i++)
-//     printf("%s\n", strdup(NULL));
+//  	char *tmp = "this is a normal test";
+//  	int r_size = strlen(tmp);
+//  	int size;
+
+//  	ft_strdup(tmp);
+//  	size = get_last_malloc_size();
+//  	if (size == r_size + 1)
+//  	{
+//  		printf("test_success");
+//  		return 0;
+// 	}
+//  	printf("TEST_KO");
 // }

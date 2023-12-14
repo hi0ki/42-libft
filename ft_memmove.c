@@ -6,7 +6,7 @@
 /*   By: eel-ansa <eel-ansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/12 17:46:47 by eel-ansa          #+#    #+#             */
-/*   Updated: 2023/12/13 12:11:03 by eel-ansa         ###   ########.fr       */
+/*   Updated: 2023/12/14 10:48:28 by eel-ansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,5 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 // {
 //     char dest[] = "abcdefg";
 //     char src[] = "abcdef";
-
 //     printf("%s\n", ft_memmove(dest + 1, dest, 4));
 // }
