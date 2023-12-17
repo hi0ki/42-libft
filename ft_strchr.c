@@ -6,7 +6,7 @@
 /*   By: eel-ansa <eel-ansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/09 23:26:42 by eel-ansa          #+#    #+#             */
-/*   Updated: 2023/12/13 12:12:06 by eel-ansa         ###   ########.fr       */
+/*   Updated: 2023/12/16 17:20:54 by eel-ansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,17 @@ char	*ft_strchr(const char *s, int c)
 	str = (char *)s;
 	while (str[i] != '\0')
 	{
-		if (str[i] == c)
+		if (str[i] == (char)c)
 			return (str + i);
 		i++;
 	}
-	if (str[i] == c)
+	if (str[i] == (char)c)
 		return (str + i);
 	return (NULL);
 }
+// int main()
+// {
+// 	printf("%s\n",ft_strchr(0x104052a40: "teste", 357: 'e'));
+// 	printf("%s", ft_strchr(0x104052a40: "teste", 1024: '\0'))
+// 	printf("%s")
+// }
