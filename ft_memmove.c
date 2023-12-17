@@ -6,7 +6,7 @@
 /*   By: eel-ansa <eel-ansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/12 17:46:47 by eel-ansa          #+#    #+#             */
-/*   Updated: 2023/12/14 21:33:21 by eel-ansa         ###   ########.fr       */
+/*   Updated: 2023/12/17 18:41:24 by eel-ansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	size_t	i;
-	size_t	j;
+	size_t			i;
+	size_t			j;
 	unsigned char	*dest;
 	unsigned char	*s;
 

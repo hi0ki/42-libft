@@ -6,19 +6,19 @@
 /*   By: eel-ansa <eel-ansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/13 12:36:26 by eel-ansa          #+#    #+#             */
-/*   Updated: 2023/12/15 15:20:44 by eel-ansa         ###   ########.fr       */
+/*   Updated: 2023/12/17 18:41:53 by eel-ansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*str;
 	int		dlen;
 	int		slen;
 
-	if (!s1|| !s2)
+	if (!s1 || !s2)
 		return (NULL);
 	dlen = ft_strlen(s1);
 	slen = ft_strlen(s2);
