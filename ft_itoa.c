@@ -6,7 +6,7 @@
 /*   By: eel-ansa <eel-ansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 18:44:12 by eel-ansa          #+#    #+#             */
-/*   Updated: 2023/12/17 23:46:45 by eel-ansa         ###   ########.fr       */
+/*   Updated: 2023/12/18 15:56:22 by eel-ansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ int count_d(int size)
 {
     int i;
 
+    i = 0;
     while (size)
     {
         size = size / 10;
@@ -36,26 +37,26 @@ char *ft_itoa(int n)
     if (n < 0)
     {
         n *=-1;
-        sign++;
-        i++;  
+        sign++;  
     }
-    str = malloc(i + 1 * sizeof(char));
+    str = malloc(i + sign +1 * sizeof(char));
     if (!str)
         return (NULL);
-    str[i--] = '\0';
-    while (i >= 0 && n != 0)
+    str[i] = '\0';
+    i--;
+    while (i  + sign >= 0 && n != 0)
     {
         str[i] = n % 10 + '0';
         n = n / 10;
         i--;
     }
     if (sign == 1)
-        str[i] = '-';
+        str[0] = '-';
     return (str);
 }
 
 int main()
 {
-    int i = ---123456789;
+    int i = -123456789;
     printf("%s", ft_itoa(i));
 }
