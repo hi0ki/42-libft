@@ -13,6 +13,7 @@ CFLAGS = -Wall -Wextra -Werror -I.
 
 NAME = libft.a
 
+
 all: $(NAME)
 
 $(NAME): $(OBJS)
