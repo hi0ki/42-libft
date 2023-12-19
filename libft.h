@@ -6,16 +6,16 @@
 /*   By: eel-ansa <eel-ansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/13 12:18:27 by eel-ansa          #+#    #+#             */
-/*   Updated: 2023/12/17 18:46:05 by eel-ansa         ###   ########.fr       */
+/*   Updated: 2023/12/19 06:56:19 by eel-ansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <string.h>
-# include <stdio.h>
+
 # include <stdlib.h>
+# include <unistd.h>
 
 int		ft_tolower(int c);
 int		ft_atoi(const char *str);
@@ -44,6 +44,10 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 void	*ft_calloc(size_t count, size_t size);
+void    ft_putchar_fd(char c, int fd);
+void    ft_putstr_fd(char *s, int fd);
+void    ft_putnbr_fd(int n, int fd);
+void    ft_putendl_fd(char *s, int fd);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
 

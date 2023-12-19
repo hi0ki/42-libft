@@ -6,7 +6,7 @@
 /*   By: eel-ansa <eel-ansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 18:44:12 by eel-ansa          #+#    #+#             */
-/*   Updated: 2023/12/19 05:04:23 by eel-ansa         ###   ########.fr       */
+/*   Updated: 2023/12/19 05:15:09 by eel-ansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,8 @@ char *ft_itoa(int n)
         sign++;
     }
     str = malloc(i + 1 * sizeof(char));
+    if (!str)
+        return (NULL);
     str[i--] = '\0';
     while (i >= 0 && nmb !=0)
     {

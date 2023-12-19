@@ -6,7 +6,7 @@
 /*   By: eel-ansa <eel-ansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 21:43:01 by eel-ansa          #+#    #+#             */
-/*   Updated: 2023/12/17 18:40:55 by eel-ansa         ###   ########.fr       */
+/*   Updated: 2023/12/19 06:52:03 by eel-ansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	if (!s1 || !set)
 		return (NULL);
-	if ((strlen(s1) == 0 && strlen(set) == 0))
+	if ((ft_strlen(s1) == 0 && ft_strlen(set) == 0))
 		return (ft_strdup(""));
 	else if (!ft_strlen(s1))
 		return (ft_strdup(""));
