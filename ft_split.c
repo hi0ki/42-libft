@@ -6,14 +6,11 @@
 /*   By: eel-ansa <eel-ansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 18:44:30 by eel-ansa          #+#    #+#             */
-/*   Updated: 2023/12/17 22:14:17 by eel-ansa         ###   ########.fr       */
+/*   Updated: 2023/12/19 23:42:50 by eel-ansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 
-char **ft_split(char const *s, char c)
-{
-
-}
+char **ft_split(char const *s, char c);
