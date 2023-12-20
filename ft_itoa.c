@@ -6,13 +6,13 @@
 /*   By: eel-ansa <eel-ansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 18:44:12 by eel-ansa          #+#    #+#             */
-/*   Updated: 2023/12/19 05:15:09 by eel-ansa         ###   ########.fr       */
+/*   Updated: 2023/12/21 00:29:41 by eel-ansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int count_d(int size)
+static int count_d(int size)
 {
     int i;
 
