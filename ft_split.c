@@ -6,17 +6,16 @@
 /*   By: eel-ansa <eel-ansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 18:44:30 by eel-ansa          #+#    #+#             */
-/*   Updated: 2023/12/21 19:42:20 by eel-ansa         ###   ########.fr       */
+/*   Updated: 2023/12/21 19:54:37 by eel-ansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-
 static int	c_word(char const *s, char c)
 {
-	int i;
-	int cnt;
+	int	i;
+	int	cnt;
 
 	cnt = 0;
 	i = 0;
@@ -32,9 +31,9 @@ static int	c_word(char const *s, char c)
 	return (cnt);
 }
 
-static char **ft_free(char **str)
+static char	**ft_free(char **str)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (str[i])
@@ -45,11 +44,16 @@ static char **ft_free(char **str)
 	free(str);
 	return (NULL);
 }
-static char **ft_alloc(char *s,char c, int c_word, char **str)
+
+static char	**ft_alloc(char *s, char c, int c_word, char **str)
 {
-	int i = 0;
-	int start = 0;
-	int end = 0;
+	int	i;
+	int	start;
+	int	end;
+
+	i = 0;
+	start = 0;
+	end = 0;
 	while (i < c_word)
 	{
 		while (s[start] == c && s[start])
@@ -63,15 +67,15 @@ static char **ft_alloc(char *s,char c, int c_word, char **str)
 		start = end;
 		i++;
 	}
-	str[i]= NULL;
+	str[i] = NULL;
 	return (str);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	char **str;
-	int len_w;
-	
+	char	**str;
+	int		len_w;
+
 	len_w = c_word(s, c);
 	str = (char **)malloc(sizeof(char *) * (len_w + 1));
 	if (!str)

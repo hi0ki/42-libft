@@ -6,7 +6,7 @@
 /*   By: eel-ansa <eel-ansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 18:44:12 by eel-ansa          #+#    #+#             */
-/*   Updated: 2023/12/21 00:57:52 by eel-ansa         ###   ########.fr       */
+/*   Updated: 2023/12/21 20:22:37 by eel-ansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,21 @@ static int	count_d(int size)
 	}
 	return (i);
 }
+static char *result(char *str, unsigned int nmb , int sign , int i)
+{
+	str[i--] = '\0';
+	while (i>= 0 && nmb !=0)
+	{
+		str[i] = nmb % 10 + '0';
+		nmb = nmb / 10;
+		i--;
+	}
+	if (sign == 1)
+		str[0] = '-';
+	return (str);
+
+}
+
 char	*ft_itoa(int n)
 {
 	int				i;
@@ -46,20 +61,12 @@ char	*ft_itoa(int n)
 	str = malloc(i + 1 * sizeof(char));
 	if (!str)
 		return (NULL);
-	str[i--] = '\0';
-	while (i >= 0 && nmb !=0)
-	{
-		str[i] = nmb % 10 + '0';
-		nmb = nmb / 10;
-		i--;
-	}
-	if (sign == 1)
-		str[0] = '-';
+	str = result(str, nmb, sign, i);
 	return (str);
 }
 
 // int main()
 // {
-//     int i = -2147483649;
+//     int i = -55488445;
 //     printf("%s", ft_itoa(i));
 // }
