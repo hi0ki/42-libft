@@ -6,56 +6,56 @@
 /*   By: eel-ansa <eel-ansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 18:44:12 by eel-ansa          #+#    #+#             */
-/*   Updated: 2023/12/21 00:29:41 by eel-ansa         ###   ########.fr       */
+/*   Updated: 2023/12/21 00:57:52 by eel-ansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int count_d(int size)
+static int	count_d(int size)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    if (size < 0)
-        i++;
-    while (size)
-    {
-        size = size / 10;
-        i++;
-    }
-    return (i);
+	i = 0;
+	if (size < 0)
+		i++;
+	while (size)
+	{
+		size = size / 10;
+		i++;
+	}
+	return (i);
 }
-char *ft_itoa(int n)
+char	*ft_itoa(int n)
 {
-    int i;
-    unsigned int nmb;
-    int sign;
-    char *str;
+	int				i;
+	unsigned int	nmb;
+	int				sign;
+	char			*str;
 
-    if (n == 0)
-        return (ft_strdup("0"));
-    i = count_d(n);
-    nmb = n;
-    sign = 0;
-    if (n < 0)
-    {
-        nmb *=-1;
-        sign++;
-    }
-    str = malloc(i + 1 * sizeof(char));
-    if (!str)
-        return (NULL);
-    str[i--] = '\0';
-    while (i >= 0 && nmb !=0)
-    {
-        str[i] = nmb % 10 + '0';
-        nmb = nmb / 10;
-        i--;
-    }
-    if (sign == 1)
-        str[0] = '-';
-    return (str);
+	if (n == 0)
+		return (ft_strdup("0"));
+	i = count_d(n);
+	nmb = n;
+	sign = 0;
+	if (n < 0)
+	{
+		nmb *=-1;
+		sign++;
+	}
+	str = malloc(i + 1 * sizeof(char));
+	if (!str)
+		return (NULL);
+	str[i--] = '\0';
+	while (i >= 0 && nmb !=0)
+	{
+		str[i] = nmb % 10 + '0';
+		nmb = nmb / 10;
+		i--;
+	}
+	if (sign == 1)
+		str[0] = '-';
+	return (str);
 }
 
 // int main()

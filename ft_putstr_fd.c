@@ -6,7 +6,7 @@
 /*   By: eel-ansa <eel-ansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 06:04:03 by eel-ansa          #+#    #+#             */
-/*   Updated: 2023/12/19 06:54:23 by eel-ansa         ###   ########.fr       */
+/*   Updated: 2023/12/21 00:56:31 by eel-ansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 void ft_putstr_fd(char *s, int fd)
 {
-    int i;
+	int i;
 
-    i = 0;
-    while (s[i])
-    {
-        ft_putchar_fd(s[i], fd);
-        i++;
-    }
+	i = 0;
+	while (s[i])
+	{
+		ft_putchar_fd(s[i], fd);
+		i++;
+	}
 }
