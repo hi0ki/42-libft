@@ -6,7 +6,7 @@
 /*   By: eel-ansa <eel-ansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 18:44:30 by eel-ansa          #+#    #+#             */
-/*   Updated: 2023/12/21 19:54:37 by eel-ansa         ###   ########.fr       */
+/*   Updated: 2023/12/22 15:33:24 by eel-ansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,6 +76,8 @@ char	**ft_split(char const *s, char c)
 	char	**str;
 	int		len_w;
 
+	if (!s)
+		return (NULL);
 	len_w = c_word(s, c);
 	str = (char **)malloc(sizeof(char *) * (len_w + 1));
 	if (!str)

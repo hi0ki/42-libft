@@ -6,7 +6,7 @@
 /*   By: eel-ansa <eel-ansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/13 12:18:27 by eel-ansa          #+#    #+#             */
-/*   Updated: 2023/12/21 19:57:02 by eel-ansa         ###   ########.fr       */
+/*   Updated: 2023/12/23 11:23:48 by eel-ansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,13 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdio.h>
+# include <string.h>
+
+typedef struct  s_list
+{
+    void            *content;
+    struct s_list   *next;
+}   t_list;
 
 int		ft_tolower(int c);
 int		ft_atoi(const char *str);

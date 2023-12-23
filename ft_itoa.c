@@ -6,7 +6,7 @@
 /*   By: eel-ansa <eel-ansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 18:44:12 by eel-ansa          #+#    #+#             */
-/*   Updated: 2023/12/21 20:22:37 by eel-ansa         ###   ########.fr       */
+/*   Updated: 2023/12/22 17:42:58 by eel-ansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,11 @@ static int	count_d(int size)
 	}
 	return (i);
 }
-static char *result(char *str, unsigned int nmb , int sign , int i)
+
+static char	*result(char *str, unsigned int nmb, int sign, int i)
 {
 	str[i--] = '\0';
-	while (i>= 0 && nmb !=0)
+	while (i >= 0 && nmb != 0)
 	{
 		str[i] = nmb % 10 + '0';
 		nmb = nmb / 10;
@@ -38,7 +39,6 @@ static char *result(char *str, unsigned int nmb , int sign , int i)
 	if (sign == 1)
 		str[0] = '-';
 	return (str);
-
 }
 
 char	*ft_itoa(int n)
@@ -51,13 +51,14 @@ char	*ft_itoa(int n)
 	if (n == 0)
 		return (ft_strdup("0"));
 	i = count_d(n);
-	nmb = n;
 	sign = 0;
 	if (n < 0)
 	{
-		nmb *=-1;
+		nmb = n * -1;
 		sign++;
 	}
+	else
+		nmb = n;
 	str = malloc(i + 1 * sizeof(char));
 	if (!str)
 		return (NULL);
@@ -65,8 +66,8 @@ char	*ft_itoa(int n)
 	return (str);
 }
 
-// int main()
-// {
-//     int i = -55488445;
-//     printf("%s", ft_itoa(i));
-// }
+	// int main()
+	// {
+	//     int i = -2;
+	//     printf("%s", ft_itoa(i));
+	// }
