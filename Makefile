@@ -5,11 +5,11 @@ SRCS =  ft_atoi.c ft_isdigit.c ft_tolower.c ft_putchar_fd.c ft_putnbr_fd.c	\
 	ft_strchr.c ft_strnstr.c ft_isascii.c ft_memset.c ft_memmove.c ft_striteri.c		\
 	ft_strrchr.c ft_strdup.c ft_substr.c ft_strjoin.c ft_strtrim.c ft_strmapi.c\
 
-BONUS = ft_lstnew.c \
+BSRCS = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c ft_lstlast_bonus.c\
 
 OBJS = $(SRCS:.c=.o)
 
-OBJB = $(SRCS:.c=.o)
+OBJB = $(BSRCS:.c=.o)
 
 CC = gcc
 RM = rm -f
@@ -24,7 +24,7 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
 
-bonus:	$(OBJS) $(OBJB)
+bonus: $(OBJB)
 	ar rcs $(NAME) $(OBJS) $(OBJB)
 
 clean:
