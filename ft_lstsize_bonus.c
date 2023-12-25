@@ -6,7 +6,7 @@
 /*   By: eel-ansa <eel-ansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/24 03:36:28 by eel-ansa          #+#    #+#             */
-/*   Updated: 2023/12/24 07:35:45 by eel-ansa         ###   ########.fr       */
+/*   Updated: 2023/12/24 20:32:56 by eel-ansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,17 @@
 
 int ft_lstsize(t_list *lst)
 {
-    int i;
-    t_list *check;
+	int i;
+	t_list *check;
 
-    if(!lst)
-        return 0;
-    i = 0;
-    check = lst;
-    while (check != NULL)
-    {
-        check = check->next;
-        i++;
-    }
-    return (i);
+	if(!lst)
+		return 0;
+	i = 0;
+	check = lst;
+	while (check != NULL)
+	{
+		check = check->next;
+		i++;
+	}
+	return (i);
 }

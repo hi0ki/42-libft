@@ -6,7 +6,7 @@
 /*   By: eel-ansa <eel-ansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/23 19:05:49 by eel-ansa          #+#    #+#             */
-/*   Updated: 2023/12/24 03:39:51 by eel-ansa         ###   ########.fr       */
+/*   Updated: 2023/12/24 20:32:45 by eel-ansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 void ft_lstadd_front(t_list **lst, t_list *new)
 {
-    if (!lst)
-        return ;
-    new->next=*lst;
-    *lst = new;
+	if (!lst)
+		return ;
+	new->next=*lst;
+	*lst = new;
 }
 
 // int main()
