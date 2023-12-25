@@ -6,7 +6,7 @@
 /*   By: eel-ansa <eel-ansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/13 12:18:27 by eel-ansa          #+#    #+#             */
-/*   Updated: 2023/12/24 07:19:56 by eel-ansa         ###   ########.fr       */
+/*   Updated: 2023/12/25 10:46:42 by eel-ansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ typedef struct  s_list
 t_list  *ft_lstnew(void *content);
 void    ft_lstadd_front(t_list **lst, t_list *new);
 void ft_lstadd_back(t_list **lst, t_list *new);
+void ft_lstdelone(t_list *lst, void (*del)(void *));
 t_list *ft_lstlast(t_list *lst);
 int ft_lstsize(t_list *lst);
 

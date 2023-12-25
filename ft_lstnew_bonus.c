@@ -6,20 +6,18 @@
 /*   By: eel-ansa <eel-ansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/23 15:25:54 by eel-ansa          #+#    #+#             */
-/*   Updated: 2023/12/25 08:25:11 by eel-ansa         ###   ########.fr       */
+/*   Updated: 2023/12/25 10:38:22 by eel-ansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list *ft_lstnew(void *content)
+t_list	*ft_lstnew(void *content)
 {
-	t_list *node;
+	t_list	*node;
 
-	if (!content)
-		return (NULL);
-	node = (t_list *)malloc(sizeof(t_list) + 1);
-	if(!node)
+	node = (t_list *)malloc(sizeof(t_list));
+	if (!node)
 		return (NULL);
 	node->content = content;
 	node->next = NULL;
