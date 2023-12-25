@@ -1,22 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast_bonus.c                                 :+:      :+:    :+:   */
+/*   ft_lstclear_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eel-ansa <eel-ansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/24 05:47:36 by eel-ansa          #+#    #+#             */
-/*   Updated: 2023/12/25 13:04:15 by eel-ansa         ###   ########.fr       */
+/*   Created: 2023/12/25 13:13:03 by eel-ansa          #+#    #+#             */
+/*   Updated: 2023/12/25 13:41:16 by eel-ansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstlast(t_list *lst)
+void ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	if (!lst)
-		return (NULL);
-	while (lst->next)
-		lst = lst->next;
-	return (lst);
+    while ((*lst))
+    {
+        del((*lst)->content);
+        free((*lst));
+        (*lst) = *lst->next;
+    }
+    *lst = NULL;
 }

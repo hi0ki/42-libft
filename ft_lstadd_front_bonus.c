@@ -6,17 +6,17 @@
 /*   By: eel-ansa <eel-ansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/23 19:05:49 by eel-ansa          #+#    #+#             */
-/*   Updated: 2023/12/24 20:32:45 by eel-ansa         ###   ########.fr       */
+/*   Updated: 2023/12/25 13:03:25 by eel-ansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstadd_front(t_list **lst, t_list *new)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	if (!lst)
 		return ;
-	new->next=*lst;
+	new->next = *lst;
 	*lst = new;
 }
 
@@ -41,5 +41,5 @@ void ft_lstadd_front(t_list **lst, t_list *new)
 //         current_node = current_node->next;
 //     }
 
-//     return 0;
+//     return (0);
 // }
