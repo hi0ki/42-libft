@@ -6,7 +6,7 @@
 /*   By: eel-ansa <eel-ansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 15:36:14 by eel-ansa          #+#    #+#             */
-/*   Updated: 2023/12/24 20:22:36 by eel-ansa         ###   ########.fr       */
+/*   Updated: 2023/12/27 03:38:55 by eel-ansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t	dlen;
 	size_t	slen;
 
-	if (!dst)
-		return (ft_strlen(src));
 	i = 0;
 	dlen = ft_strlen(dst);
 	slen = ft_strlen(src);
