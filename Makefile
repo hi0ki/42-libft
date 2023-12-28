@@ -9,34 +9,25 @@ BSRCS = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c ft_lstlast_
 		ft_lstdelone_bonus.c  ft_lstclear_bonus.c ft_lstiter_bonus.c ft_lstmap_bonus.c\
 
 OBJS = $(SRCS:.c=.o)
+OBJB = $(BDRCS:.c=.o)
 
-OBJB = $(BSRCS:.c=.o)
-
-CC = cc
+CC = CC
 RM = rm -f
-CFLAGS = -Wall -Wextra -Werror
-
 NAME = libft.a
 
-.SILENT:
+all : $(NAME)
 
-all: $(NAME)
-
-$(NAME): $(OBJS)
-	ar rcs $(NAME) $(OBJS)
-
-%.o : %.c
-	cc $(CFLAGS) -c $< -o $@
-
-bonus: $(OBJB)
+$(NAME) : $(OBJS) $(OBJB)
 	ar rcs $(NAME) $(OBJS) $(OBJB)
-
-clean:
+	
+bonus : $(OBJB)
+	ar rcs $(NAME) $(OBJB)
+clean :
 	$(RM) $(OBJS) $(OBJB)
 
-fclean: clean
+fclean : clean
 	$(RM) $(NAME)
 
-re: fclean all
-
-.PHONY: all clean fclean re bonus
+re :
+	fclean $(NAME)
+	
