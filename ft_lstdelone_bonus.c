@@ -6,7 +6,7 @@
 /*   By: eel-ansa <eel-ansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/24 22:53:11 by eel-ansa          #+#    #+#             */
-/*   Updated: 2023/12/27 03:30:45 by eel-ansa         ###   ########.fr       */
+/*   Updated: 2023/12/28 03:51:12 by eel-ansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@
 // }
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
+	if (!lst || !del)
+		return ;
 	del(lst->content);
 	free(lst);
 }

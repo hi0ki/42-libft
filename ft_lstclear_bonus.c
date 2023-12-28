@@ -6,7 +6,7 @@
 /*   By: eel-ansa <eel-ansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/25 13:13:03 by eel-ansa          #+#    #+#             */
-/*   Updated: 2023/12/27 03:32:50 by eel-ansa         ###   ########.fr       */
+/*   Updated: 2023/12/28 03:50:30 by eel-ansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*save;
 
+	if (!lst || !del)
+		return ;
 	while ((*lst))
 	{
 		del((*lst)->content);
