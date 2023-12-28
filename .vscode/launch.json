@@ -6,8 +6,8 @@
       "type": "lldb",
       "request": "launch",
       "args": [],
-      "cwd": "/Users/eel-ansa/Desktop/libft-1",
-      "program": "/Users/eel-ansa/Desktop/libft-1/build/Debug/outDebug"
+      "cwd": "/Users/eel-ansa/libft",
+      "program": "/Users/eel-ansa/libft/build/Debug/outDebug"
     }
   ]
 }
