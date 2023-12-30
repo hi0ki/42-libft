@@ -6,7 +6,7 @@
 /*   By: eel-ansa <eel-ansa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/24 07:19:20 by eel-ansa          #+#    #+#             */
-/*   Updated: 2023/12/25 13:03:43 by eel-ansa         ###   ########.fr       */
+/*   Updated: 2023/12/30 09:52:02 by eel-ansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,17 +31,19 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 
 // int main()
 // {
-//     t_list *node;
-//     t_list *new;
-//     new = ft_lstnew("last node");
-//     node = ft_lstnew("head");
-//     node->next =ft_lstnew("new node");
-//     node->next->next =ft_lstnew("new node!");
-//     node->next->next->next =NULL;
-//     ft_lstadd_back(&node,new);
-//     while (node)
-//     {
-//         printf("%s\n",node->content);
-//         node =node->next;
-//     }
+// 	t_list *head = ft_lstnew("head node");
+// 	t_list *node1 = ft_lstnew("node 1");
+// 	t_list *node2 = ft_lstnew("node 2");
+// 	t_list *new_node = ft_lstnew("new node");
+
+// 	ft_lstadd_back(&head, node1);
+// 	ft_lstadd_back(&head, node2);
+// 	ft_lstadd_back(&head, new_node);
+
+// 	t_list *skip = head;
+// 	while (skip)
+// 	{
+// 		printf("%s\n", skip->content);
+// 		skip = skip->next;
+// 	}
 // }
