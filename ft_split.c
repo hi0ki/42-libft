@@ -12,21 +12,30 @@
 
 #include "libft.h"
 
-static int	c_word(char const *s, char c)
+static int	c_word(char const *s, char *c)
 {
 	int	i;
+	int	j;
 	int	cnt;
 
 	cnt = 0;
 	i = 0;
 	while (s[i])
 	{
-		while (s[i] == c && s[i])
-			i++;
-		if (s[i] != c && s[i])
+		j = 0;
+		while (c[j])
+		{
+			if (s[i] == c[j] && s[i])
+				break ;
+			j++;
+		}
+		if (c[j] == '\0')
+		{
 			cnt++;
-		while (s[i] != c && s[i])
-			i++;
+			while (s[i] && !ft_strchr(c, s[i]))
+				i++;
+		}
+		i++;
 	}
 	return (cnt);
 }
@@ -42,7 +51,7 @@ static char	**ft_free(char **str, int i)
 	return (NULL);
 }
 
-static char	**ft_alloc(char *s, char c, int c_word, char **str)
+static char	**ft_alloc(char *s, char *c, int c_word, char **str)
 {
 	int	i;
 	int	start;
@@ -53,10 +62,10 @@ static char	**ft_alloc(char *s, char c, int c_word, char **str)
 	end = 0;
 	while (i < c_word)
 	{
-		while (s[start] == c && s[start])
+		while (ft_strchr(c, s[start]) && s[start])
 			start++;
 		end = start;
-		while (s[end] != c && s[end])
+		while (!ft_strchr(c, s[end]) && s[end])
 			end++;
 		str[i] = ft_substr(s, start, end - start);
 		if (!str[i])
@@ -68,7 +77,7 @@ static char	**ft_alloc(char *s, char c, int c_word, char **str)
 	return (str);
 }
 
-char	**ft_split(char const *s, char c)
+char	**ft_split(char const *s, char *c)
 {
 	char	**str;
 	int		len_w;
@@ -76,31 +85,10 @@ char	**ft_split(char const *s, char c)
 	if (!s)
 		return (NULL);
 	len_w = c_word(s, c);
+	printf("len = %d\n", len_w);
 	str = (char **)malloc(sizeof(char *) * (len_w + 1));
 	if (!str)
 		return (NULL);
 	str = ft_alloc((char *)s, c, len_w, str);
 	return (str);
 }
-
-// int main()
-// {
-//     char str[] = "  hello world hiki hi";
-//     char set = ' ';
-//     char **arr = ft_split(str, set);
-
-//     // Loop through the array and print each string
-//     for (int i = 0; arr[i] != NULL; i++)
-//     {
-//         printf("%s\n", arr[i]);
-//     }
-
-//     // Free the allocated memory
-//     for (int i = 0; arr[i] != NULL; i++)
-//     {
-//         free(arr[i]);
-//     }
-//     free(arr);
-
-//     return 0;
-// }

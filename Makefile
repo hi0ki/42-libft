@@ -15,7 +15,7 @@ AR = ar rcs
 CC = CC
 RM = rm -f
 NAME = libft.a
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = #-Wall -Wextra -Werror
 
 all:	$(NAME)
 
