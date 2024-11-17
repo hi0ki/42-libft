@@ -1,27 +1,38 @@
 # Libft
 
-Libft is a custom implementation of essential C standard library functions, developed as part of the 42 Network curriculum at 1337.
-This project provides foundational programming skills by recreating a selection of common functions and adding a few utility functions.
+A C library of useful functions that will be used throughout the 42 cursus.
 
-## Table of Contents
-- [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Example](#example)
-- [Cleaning Up](#cleaning-up)
-- [Project Status](#project-status)
+## Project Description
+Recreation of basic C functions and additional utilities to build a personal library.
 
-## Features
+## Content
 
-Libft includes:
-- **Memory manipulation**: `ft_memset`, `ft_memcpy`, `ft_bzero`, etc.
-- **String manipulation**: `ft_strlen`, `ft_strncmp`, `ft_strdup`, etc.
-- **Linked list handling**: `ft_lstnew`, `ft_lstadd_front`, etc.
-- **Character checks and conversions**: `ft_isalpha`, `ft_toupper`, etc.
+### Mandatory
+- Libc functions (character checks, string manipulation, memory management)
+- Additional functions (string operations, memory allocation, file descriptor operations)
 
-## Installation
+### Bonus
+- Linked list functions (create, delete, modify and manipulate lists)
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/libft.git
-   cd libft
+## Setup
+
+```bash
+# Compile library
+make
+
+# Compile with bonus
+make bonus
+
+# Clean files
+make clean    # Remove .o files
+make fclean   # Remove .o files and library
+make re       # Recompile library
+```
+
+## Usage
+```c
+#include "libft.h"
+
+// Compile your program with:
+gcc your_program.c libft.a
+```
